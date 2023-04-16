@@ -1,0 +1,7 @@
+/* This file is loaded after all other CSS files, so it can override them. */
+
+/* Enable max-width for all content without toc */
+article .prose > div:first-child {
+  max-width: 100%;
+}
+
