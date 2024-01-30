@@ -24,7 +24,7 @@
   translation: "Inicio"
 
 - id: edit_post
-  translation: "Editar"
+  translation: "Editar en Github"
 
 - id: code_copy
   translation: "copiar"

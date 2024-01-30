@@ -20,8 +20,10 @@ languages:
 
     params:
       homeInfoParams:
-        Title: Welcome to the Antonio José Masiá's Blog
-        Content: Software engineer and 🚀 by definition 
+        Title: Welcome to Antonio José Masiá's Blog
+        Content: |
+          - Software Engineer specialized in **web technologies** and fascinated by **λ functional programming**
+
 
     menu:
       main:
@@ -39,7 +41,7 @@ languages:
           weight: 40
         - identifier: stats
           name: Stats
-          url: https://stats.ajmasia.me/
+          url: https://ajmasia.goatcounter.com/
           params:
             external: true
           weight: 50
@@ -72,6 +74,7 @@ params:
   defaultTheme: auto
 
   displayFullLangName: true
+  ShowAuthor: true
   ShowReadingTime: true
   ShowPageViews: true
   ShowLikes: false
@@ -91,33 +94,25 @@ params:
   tocopen: false
   SeriesOpen: false
 
+  goatcounter: ajmasia
+
+
   homeInfoParams:
     Title: Bienvenido al Blog de Antonio José Masiá
-    Content: "Software engineer y 🚀 por definición" 
+    Content: |  
+      - Software Engineer especialziado en **tecnologías web** y fascinado por la **λ progrmación funcional**
 
-  # profileMode:
-  #   enabled: true
-  #   title: Antonio José Masiá
-  #   subtitle: "Software engineer y 🚀 por definición"
-  #   imageUrl: "https://gravatar.com/userimage/182397666/ccac8be40036e4f522eafc8eb22a51cd.jpeg?size=250"
-  #   imageWidth: 250
-  #   imageHeight: 250
-  #   imageTitle: Foto de perfil
-  #   buttons:
-  #     - name: Blog
-  #       url: posts
-  #     - name: Series
-  #       url: series
-  #     - name: Archive
-  #       url: archive
-  #     - name: Tags
-  #       url: tags
 
   socialIcons:
     - name: github
       url: "https://github.com/ajmasia"
     - name: linkedin
       url: "https://www.linkedin.com/in/ajmasia/"
+    - name: x 
+      url: "https://twitter.com/ajmasia"
+    - name: instagram
+      url: "https://instagram.com/ajmasia"
+
 
   cover:
     hidden: true
@@ -125,7 +120,7 @@ params:
     hiddenInSingle: true
 
   editPost:
-    URL: "https://gitlab.com/ajmasia/blog/-/blob/main/content"
+    URL: "https://github.com/ajmasia/ajmasia.me/tree/main/content"
     appendFilePath: true
 
   fuseOpts:
@@ -142,7 +137,6 @@ params:
         { name: "content", weight: 0.4 },
       ]
 
-goatcounter: ajmasia
 
 menu:
   main:

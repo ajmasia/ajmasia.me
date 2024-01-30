@@ -29,7 +29,7 @@
 
 .social-icons a {
   display: inline-flex;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
 .social-icons a svg {
@@ -62,4 +62,41 @@ pre {
 div.highlight:hover .copy-code,
 pre:hover .copy-code {
   display: block;
+}
+
+.meta-item {
+  display: inline-block;
+}
+.meta-item * {
+  color: var(--secondary);
+}
+
+.meta-item:not(:last-of-type):after {
+  content: "·";
+  margin-inline-start: 0.5em;
+  margin-inline-end: 0.5em;
+}
+
+.meta-item svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  margin-right: 4px;
+}
+
+.meta-item a {
+  transition: var(--link-transition);
+}
+.meta-item a:hover {
+  color: var(--primary);
+}
+.meta-item .post-meta-tags a:not(:last-of-type) {
+  margin-inline-end: 0.3em;
+}
+.meta-item .post-meta-tags a:not(:last-of-type):after {
+  content: ",";
+}
+.meta-item .post-meta-tags a:before {
+  content: "#";
 }
