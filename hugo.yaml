@@ -31,10 +31,10 @@ languages:
           name: Posts
           url: /posts/
           weight: 10
-        - identifier: uses
-          name: Uses
-          url: /uses/
-          weight: 40
+        # - identifier: uses
+        #   name: Uses
+        #   url: /uses/
+        #   weight: 40
         - identifier: search
           name: Search
           url: /search/
@@ -144,10 +144,10 @@ menu:
       name: Blog
       url: /posts/
       weight: 10
-    - identifier: uses
-      name: Cacharreo
-      url: /uses/
-      weight: 40
+    # - identifier: uses
+    #   name: Cacharreo
+    #   url: /uses/
+    #   weight: 40
     - identifier: search
       name: Buscar
       url: /search/
