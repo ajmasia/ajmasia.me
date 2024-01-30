@@ -160,7 +160,7 @@ menu:
       weight: 40
     - identifier: stats
       name: Stats
-      url: https://stats.ajmasia.me/
+      url: https://ajmasia.goatcounter.com/
       params:
         external: true
       weight: 50
