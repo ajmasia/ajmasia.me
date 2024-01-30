@@ -3,7 +3,7 @@ title: "Hugo: The perfect site generator"
 canonicalURL: https://ajmasia.me/posts/30-01-2024_hugo_el-generador-de-sitios-estaticos/
 date: 2024-01-30
 tags:
-  - offtopic
+  - hugo
 cover:
   image: 
 ---
