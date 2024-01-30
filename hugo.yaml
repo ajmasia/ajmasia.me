@@ -1,0 +1,182 @@
+baseURL: https://ajmasia.me/
+theme: PaperMod
+paginate: 12
+defaultContentLanguage: es
+defaultContentLanguageInSubdir: false
+
+languages:
+  es:
+    languageName: ":es:"
+    languageCode: es-ES
+    languageDirection: ltr
+    title: ajmasia.me
+    weight: 1
+  en:
+    languageName: ":uk:"
+    languageCode: en-US
+    languageDirection: ltr
+    title: ajmasia.me
+    weight: 2
+
+    params:
+      homeInfoParams:
+        Title: Welcome to the Antonio José Masiá's Blog
+        Content: Software engineer and 🚀 by definition 
+
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /posts/
+          weight: 10
+        - identifier: uses
+          name: Uses
+          url: /uses/
+          weight: 40
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 40
+        - identifier: stats
+          name: Stats
+          url: https://stats.ajmasia.me/
+          params:
+            external: true
+          weight: 50
+
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: True
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+module:
+  mounts:
+  - source: content
+    target: content
+    excludeFiles: source_code/*
+
+
+params:
+  env: production
+  title: ajmasia.me
+  description: "El blog de Antonio José Masiá"
+  keywords: [Blog, DevLog]
+  author: ajmasia
+  DateFormat: "01-02-2006"
+  defaultTheme: auto
+
+  displayFullLangName: true
+  ShowReadingTime: true
+  ShowPageViews: true
+  ShowLikes: false
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  SeriesOpen: false
+
+  homeInfoParams:
+    Title: Bienvenido al Blog de Antonio José Masiá
+    Content: "Software engineer y 🚀 por definición" 
+
+  # profileMode:
+  #   enabled: true
+  #   title: Antonio José Masiá
+  #   subtitle: "Software engineer y 🚀 por definición"
+  #   imageUrl: "https://gravatar.com/userimage/182397666/ccac8be40036e4f522eafc8eb22a51cd.jpeg?size=250"
+  #   imageWidth: 250
+  #   imageHeight: 250
+  #   imageTitle: Foto de perfil
+  #   buttons:
+  #     - name: Blog
+  #       url: posts
+  #     - name: Series
+  #       url: series
+  #     - name: Archive
+  #       url: archive
+  #     - name: Tags
+  #       url: tags
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/ajmasia"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/ajmasia/"
+
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+
+  editPost:
+    URL: "https://gitlab.com/ajmasia/blog/-/blob/main/content"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 100
+    threshold: 0.0
+    minMatchCharLength: 0
+    keys:
+      [
+        { name: "title", weight: 0.8 },
+        { name: "section", weight: 0.2 },
+        { name: "content", weight: 0.4 },
+      ]
+
+goatcounter: ajmasia
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: uses
+      name: Cacharreo
+      url: /uses/
+      weight: 40
+    - identifier: search
+      name: Buscar
+      url: /search/
+      weight: 40
+    - identifier: stats
+      name: Stats
+      url: https://stats.ajmasia.me/
+      params:
+        external: true
+      weight: 50
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
