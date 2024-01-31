@@ -11,6 +11,9 @@ languages:
     languageDirection: ltr
     title: ajmasia.me
     weight: 1
+
+    params:
+      languageAltTitle: "Español"
   en:
     languageName: ":uk:"
     languageCode: en-US
@@ -19,6 +22,7 @@ languages:
     weight: 2
 
     params:
+      languageAltTitle: "English"
       homeInfoParams:
         Title: Welcome to Antonio José Masiá's Blog
         Content: |
