@@ -1,6 +1,7 @@
 ---
 title: "Una emergencia con NixOS"
 canonicalURL: https://ajmasia.me/posts/2022/una-emergencia-con-nixos
+author: Antonio José Masiá
 tags:
     - nixos
 date: 2022-11-06
