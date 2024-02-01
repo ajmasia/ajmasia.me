@@ -119,7 +119,7 @@ params:
 
 
   cover:
-    hidden: true
+    hidden: false
     hiddenInList: true
     hiddenInSingle: true
 
@@ -131,7 +131,7 @@ params:
     isCaseSensitive: false
     shouldSort: true
     location: 0
-    distance: 100
+    distance: 10
     threshold: 0.0
     minMatchCharLength: 0
     keys:

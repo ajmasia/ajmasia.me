@@ -6,6 +6,9 @@ tags:
     - nix
 date: 2024-02-01
 draft: false
+cover:
+  image: https://plus.unsplash.com/premium_photo-1677702162621-f61d44e676eb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
 ---
 
 Una de las ventajas de usar [Nix](https://nixos.org/) es que nos permite crear entorno personalizados y totalmente aislados para poder hacer desarrollo para plataformas específicas. La ventaja que esto tiene es que te evitas de tener que instalar en tu sistema todo aquello que necesitas para desarrollar. Esto puede tener el alcance que quieras.
