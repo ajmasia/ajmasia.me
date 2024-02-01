@@ -121,7 +121,7 @@ params:
   cover:
     hidden: false
     hiddenInList: true
-    hiddenInSingle: true
+    hiddenInSingle: false
 
   editPost:
     URL: "https://github.com/ajmasia/ajmasia.me/tree/main/content"
