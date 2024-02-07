@@ -182,7 +182,7 @@ The procedure is very similar. We only have to make the module available for the
 
 ```nix
 {
-  # Configuration via home.nix
+  # Configuration from home.nix
   imports = [
     inputs.sops-nix.homeManagerModules.sops
   ];
