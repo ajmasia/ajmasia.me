@@ -1,7 +1,7 @@
 ---
 title: "How to manage secrets in NixOS using sops-nix"
 summary: "Learn how to manage the secrets of your NixOS configurations with sops-nix, an atomic, declarative, and easily reproducible module based on sops."
-canonicalURL: https://ajmasia.me/posts/2024/como-gestionar-secrets-en-nixos-con-sops-nix
+canonicalURL: https://ajmasia.me/en/posts/2024/how-manage-secrets-in-nixos-using-sops-nix
 author: Antonio José Masiá
 tags:
     - nix
