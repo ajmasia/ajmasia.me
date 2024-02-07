@@ -8,7 +8,7 @@
   --radius: 8px;
   --theme: rgb(255, 255, 255);
   --entry: rgb(255, 255, 255);
-  --primary: rgb(30, 30, 30);
+  --primary: #5a4a78;
   --secondary: rgb(108, 108, 108);
   --tertiary: rgb(214, 214, 214);
   --content: rgb(31, 31, 31);
@@ -23,7 +23,7 @@
   --theme: rgb(29, 30, 32);
   --entry: rgb(46, 46, 51);
   /* --primary: rgb(218, 218, 219); */
-  --primary: #b4befe;
+  --primary: #9ece6a;
   --secondary: rgb(155, 156, 157);
   --tertiary: rgb(65, 66, 68);
   --content: rgb(196, 196, 197);
