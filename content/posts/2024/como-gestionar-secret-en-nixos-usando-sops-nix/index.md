@@ -154,9 +154,11 @@ La implementación ideal es usando el *flake* disponible. Lo añadiremos como in
 Con el módulo ya disponible, añadiremos la siguiente configuración a nuestro `configuration.nix`:
 
 ```nix
-sops.gnupg.home = "~/.gnupg";
-sops.gnupg.sshKeyPaths = [ ];
-sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+{
+  sops.gnupg.home = "~/.gnupg";
+  sops.gnupg.sshKeyPaths = [ ];
+  sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+}
 ```
 
 Estas declaraciones lo que permiten que [sops-nix](https://github.com/Mic92/sops-nix) sepa donde encontrar las claves privatas para los procesos de desencriptado.
@@ -164,9 +166,11 @@ Estas declaraciones lo que permiten que [sops-nix](https://github.com/Mic92/sops
 Para acceder a los secrets desde la configuración añadiremos la siguiente definición:
 
 ```nix
-sops.secrets.nixos_secret = {
-  sopsFile = ./secrets.yaml;
-};
+{
+  sops.secrets.nixos_secret = {
+    sopsFile = ./secrets.yaml;
+  };
+}
 
 ```
 
@@ -226,11 +230,12 @@ Como vimos en el caso anterior, una vez que se guarde y cierre el fichero quedar
 Con el módulo ya disponible, añadiremos la siguiente configuración a nuestro `home.nix`:
 
 ```nix
-sops.gnupg.home = "~/.gnupg";
-sops.gnupg.sshKeyPaths = [ ];
-sops.defaultSymlinkPath = "/run/user/1000/secrets";
-sops.defaultSecretsMountPoint = "/run/user/1000/secrets.d";
-
+{
+  sops.gnupg.home = "~/.gnupg";
+  sops.gnupg.sshKeyPaths = [ ];
+  sops.defaultSymlinkPath = "/run/user/1000/secrets";
+  sops.defaultSecretsMountPoint = "/run/user/1000/secrets.d";
+}
 ```
 
 Estas declaraciones lo que permiten que [sops-nix](https://github.com/Mic92/sops-nix) sepa donde encontrar las claves privatas que vamos a usar, indicándose además dónde se volcarán los secrets en el sistema.
@@ -238,11 +243,11 @@ Estas declaraciones lo que permiten que [sops-nix](https://github.com/Mic92/sops
 Para acceder a los secrets desde la configuración añadiremos la siguiente definición:
 
 ```nix
-};
-sops.secrets.home_manager_secret = {
-  sopsFile = ./secrets/secrets.yaml;
-};
-
+{
+  sops.secrets.home_manager_secret = {
+    sopsFile = ./secrets/secrets.yaml;
+  };
+}
 ```
 
 Para probar el acceso desde la configuración de home-manager vamos a crearnos un script que acceda a dicho secret y nos devuelva el valor:

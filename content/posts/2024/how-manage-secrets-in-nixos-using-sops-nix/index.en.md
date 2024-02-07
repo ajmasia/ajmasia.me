@@ -155,9 +155,11 @@ The ideal implementation is using the available *flake*. We will add it as an in
 With the module now available, we will add the following configuration to our `configuration.nix`:
 
 ```nix
-sops.gnupg.home = "~/.gnupg";
-sops.gnupg.sshKeyPaths = [ ];
-sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+{
+  sops.gnupg.home = "~/.gnupg";
+  sops.gnupg.sshKeyPaths = [ ];
+  sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+}
 ```
 
 These declarations allow [sops-nix](https://github.com/Mic92/sops-nix) to know where to find the private keys for the decryption processes.
@@ -165,9 +167,11 @@ These declarations allow [sops-nix](https://github.com/Mic92/sops-nix) to know w
 To access the secrets from the configuration we will add the following definition:
 
 ```nix
-sops.secrets.nixos_secret = {
-  sopsFile = ./secrets.yaml;
-};
+{
+ sops.secrets.nixos_secret = {
+   sopsFile = ./secrets.yaml;
+  };
+}
 ```
 
 In this definition, we are telling NixOS to make the secret **nixos_secret** available for our configuration, accessible from the property `config.sops.secrets.nixos_secret.path` which we can use anywhere in our configuration.
@@ -226,11 +230,12 @@ As we saw in the previous case, once the file is saved and closed, it will be fu
 With the module now available, we will add the following configuration to our `home.nix`:
 
 ```nix
-sops.gnupg.home = "~/.gnupg";
-sops.gnupg.sshKeyPaths = [ ];
-sops.defaultSymlinkPath = "/run/user/1000/secrets";
-sops.defaultSecretsMountPoint = "/run/user/1000/secrets.d";
-
+{
+  sops.gnupg.home = "~/.gnupg";
+  sops.gnupg.sshKeyPaths = [ ];
+  sops.defaultSymlinkPath = "/run/user/1000/secrets";
+  sops.defaultSecretsMountPoint = "/run/user/1000/secrets.d";
+}
 ```
 
 These declarations allow [sops-nix](https://github.com/Mic92/sops-nix) to know where to find the private keys we are going to use, indicating also where the secrets will be dumped in the system.
@@ -238,11 +243,11 @@ These declarations allow [sops-nix](https://github.com/Mic92/sops-nix) to know w
 To access the secrets from the configuration, we will add the following definition:
 
 ```nix
-};
-sops.secrets.home_manager_secret = {
-  sopsFile = ./secrets/secrets.yaml;
-};
-
+{
+  sops.secrets.home_manager_secret = {
+    sopsFile = ./secrets/secrets.yaml;
+  };
+}
 ```
 
 To test access from the home-manager configuration, we will create a script that accesses said secret and returns its value:
