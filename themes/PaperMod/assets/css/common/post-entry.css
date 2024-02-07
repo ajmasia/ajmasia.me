@@ -46,6 +46,10 @@
   transform: scale(0.96);
 }
 
+.post-entry:hover {
+  transform: scale(1.01);
+}
+
 .tag-entry .entry-cover {
   display: none;
 }
@@ -81,6 +85,7 @@
 
 .entry-hint {
   color: var(--secondary);
+  background: black;
 }
 
 .entry-hint-parent {

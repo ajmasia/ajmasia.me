@@ -75,7 +75,7 @@
   -webkit-box-decoration-break: clone;
 }
 
-a:hover {
+.post-content a:hover {
   box-shadow: 0 1px 0;
 }
 
