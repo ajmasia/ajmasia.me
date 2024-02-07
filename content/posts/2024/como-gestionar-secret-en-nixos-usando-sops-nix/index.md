@@ -20,7 +20,9 @@ Puedes implementar [sops-nix](https://github.com/Mic92/sops-nix) tanto en la con
 
 ## Cómo funciona sops-nix
 
-[Sops-nix](https://github.com/Mic92/sops-nix) nos permite encriptar nuestros **secrets** dentro de la definición de nuestra configuración para posteriormente desencriptarlos en la fase de build. Esto permite definirlos de fomra declarativa. Para poder hacer esto, usa por lo general, un minimo de dos claves para la configuración del sistema, una para el usario y normalmente la clave SSH de nuestra máquina (esta suele habilitarse con el servicio SSH). Como veremos, a nivel de home-manager, con tan sólo la clave de usuario será suficiente.
+[Sops-nix](https://github.com/Mic92/sops-nix) nos permite encriptar nuestros **secrets** dentro de la definición de nuestra configuración para posteriormente desencriptarlos en la fase de build. Esto permite definirlos de fomra declarativa. 
+
+Para poder hacer esto, usa por lo general claves de tipo [age](https://github.com/FiloSottile/age) o [gpg](https://www.gnupg.org/). En el caso que voy a explicar usaré dos claves, una para el usario y normalmente la clave SSH de nuestra máquina (esta suele habilitarse con el servicio SSH). Como veremos, a nivel de home-manager, con tan sólo la clave de usuario será suficiente. También podría usarse una sola clave de tipo [age](https://github.com/FiloSottile/age).
 
 Al quedar nuestros secrets totalmente encriptados, podremos subirlos de forma privada, tanto a nuestro repositorio de dotfiles como al hacer cualquier tipo de despligues en servidores, etc. Como veremos es bastante sencillo.
 

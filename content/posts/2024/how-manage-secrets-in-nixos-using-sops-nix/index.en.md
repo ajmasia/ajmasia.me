@@ -20,9 +20,11 @@ You can implement [sops-nix](https://github.com/Mic92/sops-nix) both in the NixO
 
 ## How sops-nix Works
 
-[Sops-nix](https://github.com/Mic92/sops-nix) allows us to encrypt our **secrets** within our configuration definition to later decrypt them in the build phase. This allows for declarative definition. To do this, it generally uses at least two keys for the system configuration, one for the user and usually the SSH key of our machine (this is usually enabled with the SSH service). As we will see, at the home-manager level, just the user key will be enough.
+[Sops-nix](https://github.com/Mic92/sops-nix) allows us to encrypt our **secrets** within the definition of our configuration and then decrypt them during the build phase. This enables us to define them declaratively.
 
-Since our secrets are fully encrypted, we can upload them privately, both to our dotfiles repository and when deploying on servers, etc. As we will see, it's quite simple.
+To do this, it generally uses keys of the type [age](https://github.com/FiloSottile/age) or [gpg](https://www.gnupg.org/). In the case I will explain, I will use two keys, one for the user and usually the SSH key of our machine (this is usually enabled with the SSH service). As we will see, at the home-manager level, just the user key will be enough. Also, a single [age](https://github.com/FiloSottile/age) type key could be used.
+
+With our secrets being fully encrypted, we can upload them privately, both to our dotfiles repository and when making any kind of deployments on servers, etc. As we will see, it is quite simple.
 
 ## Implementation
 
