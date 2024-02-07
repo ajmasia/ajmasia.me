@@ -5,6 +5,7 @@ canonicalURL: https://ajmasia.me/posts/2024/como-gestionar-secrets-en-nixos-usan
 author: Antonio José Masiá
 tags:
     - nix
+    - nixos
 date: 2024-02-06
 draft: false
 cover:

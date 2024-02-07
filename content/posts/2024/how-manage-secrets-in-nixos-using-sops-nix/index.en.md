@@ -5,6 +5,7 @@ canonicalURL: https://ajmasia.me/en/posts/2024/how-manage-secrets-in-nixos-using
 author: Antonio José Masiá
 tags:
     - nix
+    - nixos
 date: 2024-02-06
 draft: false
 cover:
